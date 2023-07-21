@@ -58,7 +58,7 @@ export default function Text(props) {
       <div className={`container text-${props.mode==='light'?'dark':'light'}`}  style={{
         color:props.redmode==='red'?'white':'black'
       }} >
-        <h1>{props.heading}</h1>
+        <h1 className="name">{props.heading}</h1>
         <textarea
           className="form-control my-3"
           style={myColor}
@@ -90,19 +90,21 @@ export default function Text(props) {
         </button>
       </div>
       <div className={`container text-${props.mode==='light'?'dark':'light'}`}>
-        <h2>Text Preview</h2>
+        <h2 className="name">Text Preview</h2>
         <p>{text.length>0?text:'Enter text above to preview here'}</p>
-        <h2>Text Counter</h2>
+        <h2 className="name">Text Counter</h2>
         <p>
           There are <b>{ text.split(/\s+/).filter((element)=>{return element.length!==0}).length}</b> words and
           <b>{text.length}</b> letters in your text
         </p>
-        <h2>Time Predictor</h2>
+        <h2 className="name">Time Predictor</h2>
         <p>
           <b>
             {0.0033 * text.split("").filter((element)=>{return element.length!==0}).length} mins it would take you to read all your text
           </b>
         </p>
+     
+        <p style={{fontWeight:'bolder'}}>React-App : <strong> Created By Saad Ishfaq</strong></p>
       </div>
     </>
   );
