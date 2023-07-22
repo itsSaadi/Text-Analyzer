@@ -33,7 +33,7 @@ function App() {
   return (
     <div className="App">
       <Nav
-        tit="Text-Analyzer"
+        tit="Text-Analyzer "
         mode={mode}
         changeMode={changeMode}
         yl={yellow}
